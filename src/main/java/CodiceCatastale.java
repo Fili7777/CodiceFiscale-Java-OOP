@@ -12,7 +12,7 @@ public class CodiceCatastale  {
     }
 
     public void leggiCodici() {
-    try (BufferedReader reader = new BufferedReader(new FileReader("CodiciCatastali.csv"))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/CodiciCatastali.csv"))){
         String line;
         
         while ((line = reader.readLine()) != null) {
@@ -22,6 +22,7 @@ public class CodiceCatastale  {
 
             if(Comun.equals(comune) && Provin.equals(provincia)){
                 CodiceCatastale = parts[0];
+                break;
             }
            
         }
